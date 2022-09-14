@@ -31,15 +31,18 @@ def on_tick(lReader: LeagueReader, pymeow, scriptSettings) -> None:
 
 def find_minions(lReader: LeagueReader, pymeow, minionlist, ad):
     for minion in minionlist:
-        if minion.onScreen and minion.health < ad:
+        if minion.onScreen and minion.health < ad and "Minion" in minion.name:
             pos = minion.screenPos
             x,y = pos["x"], pos["y"]
             Draw.circle(
                 pymeow=pymeow,
                 x=x,
                 y=y+20,
-                radius=10,
+                radius=15,
                 color="green",
                 filled=True
             )
+
+
+
 
