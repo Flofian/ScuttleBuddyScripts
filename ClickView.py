@@ -6,6 +6,11 @@ import math
 import os
 from scripts.helpers import Draw
 
+# TODO: you need this in Entity.py
+#    @cached_property
+#    def moveSpeed(self) -> float:
+#        return self.pm.read_float(self.entityAddress + offsets.ObjMoveSpeed)
+
 
 # Setup function | only runs once on script load
 def setup() -> dict:
