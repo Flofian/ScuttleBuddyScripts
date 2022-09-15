@@ -58,7 +58,7 @@ def draw_spell(position, pymeow, isReady):
         return
     if isReady == 0:
         c = "green"
-    elif isReady <= 1:
+    elif 0< isReady <= 1:
         c = "orange"
     else:
         c = "red"
